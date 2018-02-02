@@ -267,6 +267,8 @@
 		CDFE9F6520087E7C000A0AA6 /* NSAttributedString+ZHNCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE9F6420087E7C000A0AA6 /* NSAttributedString+ZHNCreate.m */; };
 		CDFE9F722008922A000A0AA6 /* ZHNTransmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE9F712008922A000A0AA6 /* ZHNTransmitViewController.m */; };
 		CE13CF5E2023160F0066FAC1 /* COSMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13CF5D2023160F0066FAC1 /* COSMessageTableViewCell.m */; };
+		CE1CE180202410E100D23D0E /* RRGlobalMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE17F202410E100D23D0E /* RRGlobalMetrics.m */; };
+		CE1CE183202413AF00D23D0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE182202413AE00D23D0E /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -802,6 +804,10 @@
 		CDFE9F712008922A000A0AA6 /* ZHNTransmitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNTransmitViewController.m; sourceTree = "<group>"; };
 		CE13CF5C2023160F0066FAC1 /* COSMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COSMessageTableViewCell.h; sourceTree = "<group>"; };
 		CE13CF5D2023160F0066FAC1 /* COSMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COSMessageTableViewCell.m; sourceTree = "<group>"; };
+		CE1CE17E202410E000D23D0E /* RRGlobalMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRGlobalMetrics.h; sourceTree = "<group>"; };
+		CE1CE17F202410E100D23D0E /* RRGlobalMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRGlobalMetrics.m; sourceTree = "<group>"; };
+		CE1CE181202413AE00D23D0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		CE1CE182202413AE00D23D0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		CF3ED1F8A2BA4FAA98C2A19B /* Pods-ZHNCosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.release.xcconfig"; sourceTree = "<group>"; };
 		FA5B01EC8012CE88E5ABC453 /* Pods-ZHNCosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1217,6 +1223,10 @@
 		CD2FF8411F73FA0500E8D307 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE1CE17E202410E000D23D0E /* RRGlobalMetrics.h */,
+				CE1CE17F202410E100D23D0E /* RRGlobalMetrics.m */,
+				CE1CE181202413AE00D23D0E /* UIView+Frame.h */,
+				CE1CE182202413AE00D23D0E /* UIView+Frame.m */,
 				CD1388991FDBB20B004932CC /* User */,
 				CD42A0FE1FAB615B00CB6BBA /* Network */,
 				CD0CC9CF1FA7133A000AEAD1 /* Config */,
@@ -2526,12 +2536,14 @@
 				CD42A1101FADE77300CB6BBA /* RACSignal+ZHNRichTextHelper.m in Sources */,
 				CDDE5EDD201619D50062CBCD /* ZHNHotSearchModel.m in Sources */,
 				CD80E4D51F9396140099E7E5 /* NSImage+ANImageBitmapRep.m in Sources */,
+				CE1CE180202410E100D23D0E /* RRGlobalMetrics.m in Sources */,
 				CDB77C7C200F377400255E67 /* UITableView+ZHNStatusChangePreload.m in Sources */,
 				CD80E4DA1F9396140099E7E5 /* BitmapContextManipulator.m in Sources */,
 				CD80E28F1F7BCFC00099E7E5 /* NSObject+ZHNCosmosTheme.m in Sources */,
 				CD80E4201F90F24C0099E7E5 /* ZHNMainControllerColorPickerTrasitionHelper.m in Sources */,
 				CD09D7681FF7D3E3007B8310 /* ZHNUserAllTimelineViewController.m in Sources */,
 				CDDAB0A62002553600127371 /* ZHNHomepageRelationshipButton.m in Sources */,
+				CE1CE183202413AF00D23D0E /* UIView+Frame.m in Sources */,
 				CD80E1D21F77D8EF0099E7E5 /* UIResponder+ZHNResponderRouter.m in Sources */,
 				CDD75C081FBB36AE00E64241 /* ZHNStatusToolView.m in Sources */,
 				CD2E047E1FD6F77900D49549 /* UITableView+ZHNVerticalScrollIndicator.m in Sources */,

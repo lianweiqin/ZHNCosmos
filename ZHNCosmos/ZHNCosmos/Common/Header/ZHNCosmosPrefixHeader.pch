@@ -40,4 +40,7 @@
 #import "UIViewController+ZHNCosmosNavibarAlpha.h"
 #import "UINavigationController+ZHNCosmosNavibarAlpha.h"
 #import "UIView+zhnExpandTouchSize.h"
+
+#import "RRGlobalMetrics.h"
+#import "UIView+Frame.h"
 #endif
