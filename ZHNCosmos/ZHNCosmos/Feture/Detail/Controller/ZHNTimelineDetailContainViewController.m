@@ -143,7 +143,8 @@ static CGFloat const KToolHeight = 40;
         self.likeController.detailBasic = self.detailBasic;
         self.toolView.detailBasic = self.detailBasic;
     } failure:^(NSError *error, NSURLSessionDataTask *task) {
-    }];
+
+	}];
 }
 
 #pragma mark - getters

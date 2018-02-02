@@ -15,7 +15,9 @@
     [dict addEntriesFromDictionary:@{@"ID":@"id",
                                      @"likeCounts":@"like_counts",
                                      @"moreInfo":@"more_info",
-                                     @"replyComment":@"reply_comment"}];
+                                     @"replyComment":@"reply_comment",
+									 @"originStatus" : @"status"
+									 }];
     return [dict copy];
 }
 

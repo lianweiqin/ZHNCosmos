@@ -17,6 +17,8 @@
 @property (nonatomic,strong) ZHNTimelineCommentMoreInfo *moreInfo;
 @property (nonatomic,strong) NSAttributedString *moreText;
 @property (nonatomic,assign) CGSize moreTextPreSize;
+
+@property (nonatomic,strong) ZHNTimelineStatus* originStatus;
 @end
 
 ////////////////////////////////////////////////////////

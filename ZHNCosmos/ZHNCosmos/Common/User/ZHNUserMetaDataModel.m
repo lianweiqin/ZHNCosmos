@@ -49,7 +49,7 @@
 
 + (ZHNUserMetaDataModel *)displayUserMetaData {
     NSDictionary *params = @{@"isDisplay":@(YES)};
-    return [[ZHNUserMetaDataModel searchWithWhere:params]firstObject];
+    return [[ZHNUserMetaDataModel searchWithWhere:params] firstObject];
 }
 
 + (NSArray<ZHNUserMetaDataModel *> *)addedUsers {

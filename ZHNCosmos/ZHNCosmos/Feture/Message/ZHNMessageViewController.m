@@ -13,6 +13,7 @@
 #import "ZHNNetworkManager.h"
 #import "COSMessageTableViewCell.h"
 #import "ZHNTimelineComment.h"
+#import "ZHNTimelineDetailContainViewController.h"
 
 @interface ZHNMessageViewController ()<UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 @property (nonatomic, strong) UITableView* tableView;
@@ -89,6 +90,15 @@
 	cell.comment = _messageList[indexPath.row];
 	return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	ZHNTimelineComment* item = _messageList[indexPath.row];
+	ZHNTimelineDetailContainViewController *detailController = [[ZHNTimelineDetailContainViewController alloc]init];
+	detailController.status = item.originStatus;
+	detailController.defaultType = ZHNDefaultShowTypeComments;
+	[self.navigationController pushViewController:detailController animated:YES];
+}
+
 
 #pragma mark - DZNEmptyDataSet datasource
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {

@@ -14,6 +14,7 @@
 #import "ZHNTimelineStatusConfigReloadObserver.h"
 #import "ZHNCosmosLoginView.h"
 #import "ZHNUserMetaDataModel.h"
+#import "ZHNCosmosUserManager.h"
 
 @interface AppDelegate ()
 
@@ -42,9 +43,19 @@
 #endif
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (![ZHNUserMetaDataModel displayUserMetaData]) {
+		ZHNUserMetaDataModel* model = [ZHNUserMetaDataModel displayUserMetaData];
+        if (!model) {
             [ZHNCosmosLoginView zhn_showLoginView];
-        }
+		}else if (!model.userDetail && model.uid != 0) {
+			// request user detail
+			[ZHNCosmosUserManager zhn_getUserDetailStatusWithUid:model.uid screenName:nil success:^(id result, NSURLSessionDataTask *task) {
+				// 解决微博信息同步问题
+				ZHNTimelineUser *userDetail = [ZHNTimelineUser yy_modelWithDictionary:result];
+				[ZHNUserMetaDataModel updateDisplayUserDetail:userDetail];
+			} failure:^(NSError *error, NSURLSessionDataTask *task) {
+				
+			}];
+		}
     });
     
     return YES;
