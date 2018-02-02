@@ -266,6 +266,7 @@
 		CDFE9F6120084A57000A0AA6 /* ZHNCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE9F6020084A57000A0AA6 /* ZHNCommentsViewController.m */; };
 		CDFE9F6520087E7C000A0AA6 /* NSAttributedString+ZHNCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE9F6420087E7C000A0AA6 /* NSAttributedString+ZHNCreate.m */; };
 		CDFE9F722008922A000A0AA6 /* ZHNTransmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFE9F712008922A000A0AA6 /* ZHNTransmitViewController.m */; };
+		CE13CF5E2023160F0066FAC1 /* COSMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13CF5D2023160F0066FAC1 /* COSMessageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -799,6 +800,8 @@
 		CDFE9F6420087E7C000A0AA6 /* NSAttributedString+ZHNCreate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ZHNCreate.m"; sourceTree = "<group>"; };
 		CDFE9F702008922A000A0AA6 /* ZHNTransmitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHNTransmitViewController.h; sourceTree = "<group>"; };
 		CDFE9F712008922A000A0AA6 /* ZHNTransmitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHNTransmitViewController.m; sourceTree = "<group>"; };
+		CE13CF5C2023160F0066FAC1 /* COSMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COSMessageTableViewCell.h; sourceTree = "<group>"; };
+		CE13CF5D2023160F0066FAC1 /* COSMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COSMessageTableViewCell.m; sourceTree = "<group>"; };
 		CF3ED1F8A2BA4FAA98C2A19B /* Pods-ZHNCosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.release.xcconfig"; sourceTree = "<group>"; };
 		FA5B01EC8012CE88E5ABC453 /* Pods-ZHNCosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2010,6 +2013,8 @@
 			children = (
 				CDDE5F31201B663F0062CBCD /* ZHNMessageViewController.h */,
 				CDDE5F32201B663F0062CBCD /* ZHNMessageViewController.m */,
+				CE13CF5C2023160F0066FAC1 /* COSMessageTableViewCell.h */,
+				CE13CF5D2023160F0066FAC1 /* COSMessageTableViewCell.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -2254,12 +2259,12 @@
 		CD2FF8011F73F86400E8D307 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = zhn;
 				TargetAttributes = {
 					CD2FF8081F73F86400E8D307 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 956Q5S49L6;
+						DevelopmentTeam = RQ2GUTNWPB;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -2568,6 +2573,7 @@
 				CDA160471FC3018400060E73 /* ZHNPhotoItem.m in Sources */,
 				CD80E4D71F9396140099E7E5 /* UIImage+ANImageBitmapRep.m in Sources */,
 				CDCB0C341FA8B229001CCC67 /* ZHNTopHud.m in Sources */,
+				CE13CF5E2023160F0066FAC1 /* COSMessageTableViewCell.m in Sources */,
 				CD0BDC461FC7B64B002F4027 /* ZHNRootViewAnimateManager.m in Sources */,
 				CD1388921FDB8598004932CC /* ZHNCosmosUserManager.m in Sources */,
 				CD8F563D1FDE874C00F9A89B /* ZHNRSAManager.m in Sources */,
@@ -2707,7 +2713,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2715,7 +2723,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2738,7 +2750,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2756,7 +2768,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2764,7 +2778,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2781,7 +2799,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2799,7 +2817,7 @@
 				CODE_SIGN_ENTITLEMENTS = ZHNCosmos/ZHNCosmos.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 956Q5S49L6;
+				DEVELOPMENT_TEAM = RQ2GUTNWPB;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ZHNCosmos/Common/Header/ZHNCosmosPrefixHeader.pch;
 				INFOPLIST_FILE = ZHNCosmos/Info.plist;
@@ -2809,7 +2827,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZHNCosmos/Common/Vendor/OpenSSL/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhnnnnncosmos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandatown.cosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZHNCosmos/Common/Vendor/AMScrollingNavbar/ZHNCosmos-Bridging-Header.h";
@@ -2828,7 +2846,7 @@
 				CODE_SIGN_ENTITLEMENTS = ZHNCosmos/ZHNCosmos.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 956Q5S49L6;
+				DEVELOPMENT_TEAM = RQ2GUTNWPB;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ZHNCosmos/Common/Header/ZHNCosmosPrefixHeader.pch;
 				INFOPLIST_FILE = ZHNCosmos/Info.plist;
@@ -2838,7 +2856,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZHNCosmos/Common/Vendor/OpenSSL/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhnnnnncosmos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandatown.cosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZHNCosmos/Common/Vendor/AMScrollingNavbar/ZHNCosmos-Bridging-Header.h";

@@ -83,6 +83,12 @@
     [super viewWillAppear:animated];
     UITableView *tableView = self.contentScrollView.contentOffset.x == 0 ? self.allController.tableView :  self.moreController.tableView;
     [self homepageTableViewDidScroll:tableView];
+	
+	[self requestUserDetail];
+}
+
+- (void)requestUserDetail {
+	
 }
 
 #pragma mark - delegate
