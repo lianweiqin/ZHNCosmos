@@ -269,6 +269,11 @@
 		CE13CF5E2023160F0066FAC1 /* COSMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE13CF5D2023160F0066FAC1 /* COSMessageTableViewCell.m */; };
 		CE1CE180202410E100D23D0E /* RRGlobalMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE17F202410E100D23D0E /* RRGlobalMetrics.m */; };
 		CE1CE183202413AF00D23D0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE182202413AE00D23D0E /* UIView+Frame.m */; };
+		CE1CE18820245CEF00D23D0E /* PostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE18720245CEF00D23D0E /* PostManager.m */; };
+		CE1CE18F20245DB800D23D0E /* NSNumber+RRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE18920245DB700D23D0E /* NSNumber+RRAdd.m */; };
+		CE1CE19020245DB800D23D0E /* NSObject+RRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE18B20245DB800D23D0E /* NSObject+RRAdd.m */; };
+		CE1CE19120245DB800D23D0E /* NSString+RRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE18D20245DB800D23D0E /* NSString+RRAdd.m */; };
+		CE1CE19420245DF600D23D0E /* NSData+RRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CE19320245DF600D23D0E /* NSData+RRAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -808,6 +813,16 @@
 		CE1CE17F202410E100D23D0E /* RRGlobalMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRGlobalMetrics.m; sourceTree = "<group>"; };
 		CE1CE181202413AE00D23D0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		CE1CE182202413AE00D23D0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		CE1CE18620245CEF00D23D0E /* PostManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostManager.h; sourceTree = "<group>"; };
+		CE1CE18720245CEF00D23D0E /* PostManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostManager.m; sourceTree = "<group>"; };
+		CE1CE18920245DB700D23D0E /* NSNumber+RRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+RRAdd.m"; sourceTree = "<group>"; };
+		CE1CE18A20245DB800D23D0E /* NSNumber+RRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+RRAdd.h"; sourceTree = "<group>"; };
+		CE1CE18B20245DB800D23D0E /* NSObject+RRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RRAdd.m"; sourceTree = "<group>"; };
+		CE1CE18C20245DB800D23D0E /* NSString+RRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RRAdd.h"; sourceTree = "<group>"; };
+		CE1CE18D20245DB800D23D0E /* NSString+RRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RRAdd.m"; sourceTree = "<group>"; };
+		CE1CE18E20245DB800D23D0E /* NSObject+RRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RRAdd.h"; sourceTree = "<group>"; };
+		CE1CE19220245DF500D23D0E /* NSData+RRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+RRAdd.h"; sourceTree = "<group>"; };
+		CE1CE19320245DF600D23D0E /* NSData+RRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+RRAdd.m"; sourceTree = "<group>"; };
 		CF3ED1F8A2BA4FAA98C2A19B /* Pods-ZHNCosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.release.xcconfig"; sourceTree = "<group>"; };
 		FA5B01EC8012CE88E5ABC453 /* Pods-ZHNCosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1194,6 +1209,7 @@
 		CD2FF83F1F73F93800E8D307 /* Feture */ = {
 			isa = PBXGroup;
 			children = (
+				CE1CE18520244A7C00D23D0E /* Post */,
 				CD2FF8401F73F9F600E8D307 /* Main */,
 				CD09D7221FE6A455007B8310 /* Login */,
 				CD56778F201250120058AA3A /* Favorites */,
@@ -1223,6 +1239,14 @@
 		CD2FF8411F73FA0500E8D307 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE1CE19220245DF500D23D0E /* NSData+RRAdd.h */,
+				CE1CE19320245DF600D23D0E /* NSData+RRAdd.m */,
+				CE1CE18A20245DB800D23D0E /* NSNumber+RRAdd.h */,
+				CE1CE18920245DB700D23D0E /* NSNumber+RRAdd.m */,
+				CE1CE18E20245DB800D23D0E /* NSObject+RRAdd.h */,
+				CE1CE18B20245DB800D23D0E /* NSObject+RRAdd.m */,
+				CE1CE18C20245DB800D23D0E /* NSString+RRAdd.h */,
+				CE1CE18D20245DB800D23D0E /* NSString+RRAdd.m */,
 				CE1CE17E202410E000D23D0E /* RRGlobalMetrics.h */,
 				CE1CE17F202410E100D23D0E /* RRGlobalMetrics.m */,
 				CE1CE181202413AE00D23D0E /* UIView+Frame.h */,
@@ -2204,6 +2228,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		CE1CE18520244A7C00D23D0E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				CE1CE18620245CEF00D23D0E /* PostManager.h */,
+				CE1CE18720245CEF00D23D0E /* PostManager.m */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2419,6 +2452,7 @@
 				CD2FF8631F73FB1A00E8D307 /* ZHNTimelineBaseViewController.m in Sources */,
 				CD2E04781FD439A200D49549 /* ZHNSafariViewController.m in Sources */,
 				CDDD6B591FCBD8B9004C1D4D /* QuickTimeMov.m in Sources */,
+				CE1CE19020245DB800D23D0E /* NSObject+RRAdd.m in Sources */,
 				CD80E4E51F9396140099E7E5 /* UIColor+ZHNGetHSB.m in Sources */,
 				CD054F6D201C57FC0052A944 /* ZHNSelectColorFitNightVersionCellNode.m in Sources */,
 				CD09D7621FF68B7A007B8310 /* ZHNHomePageAllTimelineCacheModel.m in Sources */,
@@ -2527,6 +2561,7 @@
 				CD09D72D1FEAAC39007B8310 /* ZHNHomeTimelineLayoutCacheModel.m in Sources */,
 				CD25B21D201B1502002A1CF7 /* ZHNSearchUserCellNode.m in Sources */,
 				CD06774E2013452100D56627 /* ZHNDoodleMenuBar.m in Sources */,
+				CE1CE18820245CEF00D23D0E /* PostManager.m in Sources */,
 				CD09D7511FF28CE5007B8310 /* ZHNTimelineDetailToolView.m in Sources */,
 				CDDE5F2F201A0FF20062CBCD /* ZHNSearchDot.m in Sources */,
 				CD23762D1FFB1B6600B3A7CF /* ZHNHomePageUserTimelineBaseViewController.m in Sources */,
@@ -2581,6 +2616,7 @@
 				CD1388A21FDBBC00004932CC /* ZHNWeiBoUserCookieManager.m in Sources */,
 				CD80E4DF1F9396140099E7E5 /* BGRSLoupeLayer.m in Sources */,
 				CD80E1D01F77D8EF0099E7E5 /* NSObject+ReponderRouterInvocation.m in Sources */,
+				CE1CE18F20245DB800D23D0E /* NSNumber+RRAdd.m in Sources */,
 				CD2376221FF6217800B3A7CF /* UIViewController+ZHNCosmosNavibarAlpha.m in Sources */,
 				CDA160471FC3018400060E73 /* ZHNPhotoItem.m in Sources */,
 				CD80E4D71F9396140099E7E5 /* UIImage+ANImageBitmapRep.m in Sources */,
@@ -2639,6 +2675,7 @@
 				CD23763A1FFDF93300B3A7CF /* ZHNHomePageHeadPlaceHolder.m in Sources */,
 				CD80E4E01F9396140099E7E5 /* RSColorFunctions.m in Sources */,
 				CD42A1251FB48F6B00CB6BBA /* UIImage+resizeImage.m in Sources */,
+				CE1CE19420245DF600D23D0E /* NSData+RRAdd.m in Sources */,
 				CD2140F81F9E3C69001B64E6 /* UIView+ZHNFirework.m in Sources */,
 				CD531B751FE0351C002CA3C0 /* ZHNStripedBarManager.m in Sources */,
 				CD25B217201AD376002A1CF7 /* ZHNSearchHistoryTableView.m in Sources */,
@@ -2657,6 +2694,7 @@
 				CD80E4D91F9396140099E7E5 /* CGImageContainer.m in Sources */,
 				CD7F8FD71FCEE94B008D26C2 /* ZHNVideoPlayerManager.m in Sources */,
 				CD8FE3431FD5483200745474 /* ZHNPresentFakePushTransition.m in Sources */,
+				CE1CE19120245DB800D23D0E /* NSString+RRAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

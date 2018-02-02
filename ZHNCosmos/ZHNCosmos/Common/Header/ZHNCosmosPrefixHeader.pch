@@ -41,6 +41,7 @@
 #import "UINavigationController+ZHNCosmosNavibarAlpha.h"
 #import "UIView+zhnExpandTouchSize.h"
 
+#import "ZHNUserMetaDataModel.h"
 #import "RRGlobalMetrics.h"
 #import "UIView+Frame.h"
 #endif
