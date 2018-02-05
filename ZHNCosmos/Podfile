@@ -1,3 +1,5 @@
+inhibit_all_warnings!
+
 platform :ios, '10.0'
 target 'ZHNCosmos' do
     pod 'LKDBHelper'
@@ -6,11 +8,17 @@ target 'ZHNCosmos' do
     pod 'Masonry', '~> 1.1.0'
     pod 'DKNightVersion'
     pod 'MJRefresh'
-    pod 'YYText', :git => 'https://github.com/zhnnnnn/YYText.git'
+	pod 'YYText', :git => 'https://github.com/zhnnnnn/YYText.git', :branch => 'master'
     pod 'YYModel'
     pod 'SDWebImage', '~> 4.0'	
     pod 'YYWebImage'
     pod 'RealReachability'
     pod 'DZNEmptyDataSet'
-    pod 'Texture', :git => 'https://github.com/zhnnnnn/Texture.git'
+	pod 'Texture', :git => 'https://github.com/zhnnnnn/Texture.git', :branch => 'master'
+	pod 'HMEmoticon'
+	pod 'FDFullscreenPopGesture'
+	pod 'TZImagePickerController'
+	pod 'MBProgressHUD'
+	pod 'M13ProgressSuite'
+	pod 'IQKeyboardManager'
 end

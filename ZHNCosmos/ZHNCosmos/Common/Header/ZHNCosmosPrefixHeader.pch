@@ -9,6 +9,7 @@
 #ifndef ZHNCosmosPrefixHeader_pch
 #define ZHNCosmosPrefixHeader_pch
 #import <UIKit/UIKit.h>
+
 #import "Masonry.h"
 #import "ZHNResponderRouterHeader.h"
 #import "ZHNConstantHeader.h"
@@ -41,7 +42,30 @@
 #import "UINavigationController+ZHNCosmosNavibarAlpha.h"
 #import "UIView+zhnExpandTouchSize.h"
 
+//#import "MBProgressHUD.h"
 #import "ZHNUserMetaDataModel.h"
 #import "RRGlobalMetrics.h"
 #import "UIView+Frame.h"
+#import "NSString+RRAdd.h"
+#import "NSData+RRAdd.h"
+#import "NSNumber+RRAdd.h"
+#import "UIView+RRAdd.h"
+#import "NSObject+RRAdd.h"
+
+#import "UIViewController+DDPopUpViewController.h"
+
+#define LMJWeakSelf(type)  __weak typeof(type) weak##type = type
+
+/**
+ *  属性转字符串
+ */
+#define LMJKeyPath(obj, key) @(((void)obj.key, #key))
+
+
+//是否是空对象
+#define LMJIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
 #endif

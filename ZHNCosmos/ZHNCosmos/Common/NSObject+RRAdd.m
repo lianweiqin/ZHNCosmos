@@ -96,4 +96,12 @@ static const int block_key;
 	}
 	return targets;
 }
+
+- (void)setAssociateValue:(id)value withKey:(void *)key {
+	objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (id)getAssociatedValueForKey:(void *)key {
+	return objc_getAssociatedObject(self, key);
+}
 @end

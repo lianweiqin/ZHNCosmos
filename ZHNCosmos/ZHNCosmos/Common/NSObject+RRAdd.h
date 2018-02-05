@@ -44,6 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)removeObserverBlocks;
 
+- (void)setAssociateValue:(id)value withKey:(void *)key;
+- (id)getAssociatedValueForKey:(void *)key;
 @end
 
 NS_ASSUME_NONNULL_END
