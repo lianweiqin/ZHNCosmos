@@ -15,12 +15,18 @@
 	ZHNUserMetaDataModel *displayUser = [ZHNUserMetaDataModel displayUserMetaData];
 	NSMutableDictionary *params = [NSMutableDictionary dictionary];
 	[params zhn_safeSetObjetct:displayUser.accessToken forKey:@"access_token"];
-	NSString* safeLink = @" http://weico.com/ ";
-	NSString* status = [NSString stringWithFormat:@"%@%@", text, safeLink];
-	[params zhn_safeSetObjetct:status forKey:@"status"];
-	
+//	NSString* safeLink = @" http://weico.com/ ";
+//	NSString* status = [NSString stringWithFormat:@"%@%@", text, safeLink];
+//	[params zhn_safeSetObjetct:status forKey:@"status"];
+	[params zhn_safeSetObjetct:text forKey:@"status"];
+
 	if (!images || images.count == 0) {
-		[ZHNNETWROK post:@"https://api.weibo.com/2/statuses/share.json" params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
+//		[ZHNNETWROK post:@"https://api.weibo.com/2/statuses/share.json" params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
+//			[ZHNHudManager showWarning:@"发微博成功啦~"];
+//		} failure:^(NSError *error, NSURLSessionDataTask *task) {
+//			[ZHNHudManager showWarning:@"发送微博失败, 别问我为什么"];
+//		}];
+		[ZHNNETWROK post:@"https://api.weibo.com/2/statuses/update.json" params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
 			[ZHNHudManager showWarning:@"发微博成功啦~"];
 		} failure:^(NSError *error, NSURLSessionDataTask *task) {
 			[ZHNHudManager showWarning:@"发送微博失败, 别问我为什么"];
@@ -28,7 +34,7 @@
 	}else {
 		// 带图片的那种
 		AFHTTPSessionManager* manager = [AFHTTPSessionManager manager];
-		[manager POST:@"https://api.weibo.com/2/statuses/share.json"
+		[manager POST:@"https://api.weibo.com/2/statuses/upload.json"
 		   parameters:[params copy] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
 			   [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 				   
