@@ -11,6 +11,7 @@
 #import "ZHNTimelineComment.h"
 #import "RACSignal+ZHNRichTextHelper.h"
 #import "NSAttributedString+ZHNStringPreferredSize.h"
+#import "CommentViewController.h"
 
 @implementation ZHNCommentsViewController
 - (NSArray<NSString *> *)gooeyMenuTitles {
@@ -98,5 +99,13 @@
     node.comment = self.statusArray[indexPath.row];
     [self tableNodeDisplayCell:node indexpath:indexPath];
     return node;
+}
+
+- (void)tableNode:(ASTableNode *)tableNode didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	ZHNTimelineComment* comment = self.statusArray[indexPath.row];
+	CommentViewController *publishVc = [[CommentViewController alloc] init];
+	publishVc.comment = comment;
+	publishVc.popUpViewSize = RRScreenBounds().size;
+	[self showPopUpViewController:[[LMJNavigationController alloc] initWithRootViewController:publishVc] animationType:DDPopUpAnimationTypeFade dismissWhenTouchBackground:NO];
 }
 @end

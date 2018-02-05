@@ -33,8 +33,8 @@
 			   [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 				   
 				   [formData appendPartWithFileData:UIImageJPEGRepresentation(obj, 0.6) name:@"pic" fileName:[NSString stringWithFormat:@"pic_%zd", idx] mimeType:@"application/octet-stream"];
-				   
 			   }];
+			   
 		   } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 			   [ZHNHudManager showWarning:@"发微博成功啦~"];
 			   
@@ -42,11 +42,28 @@
 			   [ZHNHudManager showWarning:@"发送微博失败, 别问我为什么"];
 		   }];
 	}
-//	[AFHTTPSessionManager manager] 
-//	[ZHNNETWROK post:@"https://api.weibo.com/2/statuses/share.json" params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
-//
-//	} failure:^(NSError *error, NSURLSessionDataTask *task) {
-//		[ZHNHudManager showWarning:@"发微博 失败了"];
-//	}];
+}
+
++ (void)postComment:(NSString *)text weiboId:(unsigned long long )weiboId commentId:(unsigned long long)commentId{
+	NSString* urlPath = nil;
+	NSMutableDictionary *params = [NSMutableDictionary dictionary];
+	if (commentId != -1) {
+		urlPath = @"https://api.weibo.com/2/comments/reply.json";
+		[params zhn_safeSetObjetct:@(commentId) forKey:@"cid"];
+	}else {
+		urlPath = @"https://api.weibo.com/2/comments/create.json";
+	}
+	ZHNUserMetaDataModel *displayUser = [ZHNUserMetaDataModel displayUserMetaData];
+	
+	[params zhn_safeSetObjetct:displayUser.accessToken forKey:@"access_token"];
+	[params zhn_safeSetObjetct:text forKey:@"comment"];
+	[params zhn_safeSetObjetct:@(weiboId) forKey:@"id"];
+	
+	
+	[ZHNNETWROK post:urlPath params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
+		[ZHNHudManager showWarning:@"评论成功~"];
+	} failure:^(NSError *error, NSURLSessionDataTask *task) {
+		[ZHNHudManager showWarning:@"评论失败~"];
+	}];
 }
 @end

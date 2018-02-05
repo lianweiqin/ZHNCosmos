@@ -324,6 +324,7 @@
 		CE94E81D2028396100545C8D /* LMJH5_OCViewController.html in Resources */ = {isa = PBXBuildFile; fileRef = CE94E8152028396100545C8D /* LMJH5_OCViewController.html */; };
 		CE94E81E2028396100545C8D /* LMJOCJSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE94E8172028396100545C8D /* LMJOCJSHelper.m */; };
 		CE94E82120283E1A00545C8D /* UIGestureRecognizer+RRAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CE94E81F20283E1900545C8D /* UIGestureRecognizer+RRAdd.m */; };
+		CE94E82A2028488600545C8D /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE94E8292028488600545C8D /* CommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -969,6 +970,8 @@
 		CE94E8192028396100545C8D /* LMJCoordinateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJCoordinateModel.h; sourceTree = "<group>"; };
 		CE94E81F20283E1900545C8D /* UIGestureRecognizer+RRAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+RRAdd.m"; sourceTree = "<group>"; };
 		CE94E82020283E1A00545C8D /* UIGestureRecognizer+RRAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+RRAdd.h"; sourceTree = "<group>"; };
+		CE94E8282028488600545C8D /* CommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		CE94E8292028488600545C8D /* CommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		CF3ED1F8A2BA4FAA98C2A19B /* Pods-ZHNCosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.release.xcconfig"; sourceTree = "<group>"; };
 		FA5B01EC8012CE88E5ABC453 /* Pods-ZHNCosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHNCosmos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHNCosmos/Pods-ZHNCosmos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2375,6 +2378,8 @@
 				CE1CE2542024624700D23D0E /* sina */,
 				CE1CE18620245CEF00D23D0E /* PostManager.h */,
 				CE1CE18720245CEF00D23D0E /* PostManager.m */,
+				CE94E8282028488600545C8D /* CommentViewController.h */,
+				CE94E8292028488600545C8D /* CommentViewController.m */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -3014,6 +3019,7 @@
 				CE1CE18F20245DB800D23D0E /* NSNumber+RRAdd.m in Sources */,
 				CD2376221FF6217800B3A7CF /* UIViewController+ZHNCosmosNavibarAlpha.m in Sources */,
 				CDA160471FC3018400060E73 /* ZHNPhotoItem.m in Sources */,
+				CE94E82A2028488600545C8D /* CommentViewController.m in Sources */,
 				CE1CE252202461E100D23D0E /* NullSafe.m in Sources */,
 				CD80E4D71F9396140099E7E5 /* UIImage+ANImageBitmapRep.m in Sources */,
 				CDCB0C341FA8B229001CCC67 /* ZHNTopHud.m in Sources */,

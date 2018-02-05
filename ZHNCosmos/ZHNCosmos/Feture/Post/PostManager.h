@@ -12,4 +12,6 @@
 
 + (void)postWeibo:(NSString *)text pic:(UIImage *)image;
 
++ (void)postComment:(NSString *)text weiboId:(unsigned long long )weiboId commentId:(unsigned long long)commentId;
+
 @end

@@ -168,7 +168,7 @@ static const NSInteger maxPhotoCount = 9;
 
 - (void)textViewDidChange:(HMEmoticonTextView *)textView
 {
-    [(UIButton *)self.lmj_navgationBar.rightView setEnabled:textView.emoticonText.length >= 20];
+    [(UIButton *)self.lmj_navgationBar.rightView setEnabled:textView.emoticonText.length >= 5];
     
 }
 

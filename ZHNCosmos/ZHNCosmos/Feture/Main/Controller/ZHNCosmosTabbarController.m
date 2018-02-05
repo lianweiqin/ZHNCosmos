@@ -83,26 +83,8 @@
 								  
 								  SINPublishViewController *publishVc = [[SINPublishViewController alloc] init];
 								  
-								  //        @property (nonatomic,retain) UIViewController *popUpViewController;
-								  //        @property (nonatomic,assign) CGPoint popUpOffset;               //相对于弹出位置的偏移
-								  //        @property (nonatomic,assign) CGSize popUpViewSize;              //弹出视图的大小
-								  //        @property (nonatomic,assign) DDPopUpPosition popUpPosition;     //弹出视图的位置
-								  //        @property (nonatomic,assign) BOOL dismissWhenTouchBackground;   //是否允许点击背景dismiss
-								  //        @property (nonatomic,copy) DismissCallback dismissCallback;
-								  
 								  publishVc.popUpViewSize = RRScreenBounds().size;
 								  [self showPopUpViewController:[[LMJNavigationController alloc] initWithRootViewController:publishVc] animationType:DDPopUpAnimationTypeFade dismissWhenTouchBackground:NO];
-//                                  [ZHNHudManager showWarning:@"发微博TODO~"];
-#warning fuck
-//								  ZHNUserMetaDataModel *displayUser = [ZHNUserMetaDataModel displayUserMetaData];
-//								  NSMutableDictionary *params = [NSMutableDictionary dictionary];
-//								  [params zhn_safeSetObjetct:displayUser.accessToken forKey:@"access_token"];
-//								  [params zhn_safeSetObjetct:@"test share inter http://weico.com/ " forKey:@"status"];
-//								  [ZHNNETWROK post:@"https://api.weibo.com/2/statuses/share.json" params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
-//
-//								  } failure:^(NSError *error, NSURLSessionDataTask *task) {
-//									  [ZHNHudManager showWarning:@"发微博 失败了"];
-//								  }];
                               }];
             [tabbarItemModelArray addObject:longPressModel];
         }
