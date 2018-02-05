@@ -27,7 +27,7 @@
 //			[ZHNHudManager showWarning:@"发送微博失败, 别问我为什么"];
 //		}];
 		[ZHNNETWROK post:@"https://api.weibo.com/2/statuses/update.json" params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
-			[ZHNHudManager showWarning:@"发微博成功啦~"];
+			[ZHNHudManager showSuccess:@"发微博成功啦~"];
 		} failure:^(NSError *error, NSURLSessionDataTask *task) {
 			[ZHNHudManager showWarning:@"发送微博失败, 别问我为什么"];
 		}];
@@ -42,7 +42,7 @@
 			   }];
 			   
 		   } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-			   [ZHNHudManager showWarning:@"发微博成功啦~"];
+			   [ZHNHudManager showSuccess:@"发微博成功啦~"];
 			   
 		   } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 			   [ZHNHudManager showWarning:@"发送微博失败, 别问我为什么"];
@@ -67,7 +67,7 @@
 	
 	
 	[ZHNNETWROK post:urlPath params:[params copy] responseType:ZHNResponseTypeJSON success:^(id result, NSURLSessionDataTask *task) {
-		[ZHNHudManager showWarning:@"评论成功~"];
+		[ZHNHudManager showSuccess:@"评论成功~"];
 	} failure:^(NSError *error, NSURLSessionDataTask *task) {
 		[ZHNHudManager showWarning:@"评论失败~"];
 	}];
